@@ -46,6 +46,8 @@ async function seedUsers(client) {
   }
 }
 
+
+
 async function seedInvoices(client) {
   try {
     await client.sql`CREATE EXTENSION IF NOT EXISTS "uuid-ossp"`;
@@ -167,7 +169,6 @@ async function main() {
   await seedCustomers(client);
   await seedInvoices(client);
   await seedRevenue(client);
-
   await client.end();
 }
 
